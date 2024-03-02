@@ -17,7 +17,7 @@ export default function FifthStep() {
       // const prompt = JSON.stringify("prompt":selectedPrompt1)
       // console.log(prompt)
       const response = await axios.post(
-        "http://localhost:3000/api/generate-image",
+        "http://localhost:3001/api/generate-image",
         { prompt: "Create an image for a book cover design for the following subject: " + userData["cover-prompt"] }
       );
 
