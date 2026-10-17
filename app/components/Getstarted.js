@@ -2,14 +2,16 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { getUserSession } from '@/session'
+import { getUserSession } from "@/session";
+import Image from "next/image";
 
-const Getstarted = async() => {
+
+const Getstarted = async () => {
   const router = useRouter();
   const user = await getUserSession();
-  var name = 'Richard';
+  var name = "Richard";
 
-  if(user){
+  if (user) {
     name = user.name;
   }
 
@@ -29,7 +31,15 @@ const Getstarted = async() => {
       >
         <div className="flex flex-col h-full justify-center">
           <div className="flex flex-row items-center">
-            <div className="pr-8">Logo</div>
+          <div className="relative w-12 h-12"> 
+              <Image 
+                src="/images/logo1.png" 
+                alt="Logo" 
+                layout="fill" 
+                objectFit="contain" 
+                className="w-full h-full" 
+              />
+            </div>
             <div className="flex flex-col pl-4 items-start">
               <div className="font-bold ">Write a book</div>
               <div className="text-sm opacity-70">
@@ -45,7 +55,15 @@ const Getstarted = async() => {
       >
         <div className="flex flex-col h-full justify-center">
           <div className="flex flex-row items-center">
-            <div className="pr-8">Logo</div>
+          <div className="relative w-12 h-12"> 
+              <Image 
+                src="/images/logo1.png" 
+                alt="Logo" 
+                layout="fill" 
+                objectFit="contain" 
+                className="w-full h-full" 
+              />
+            </div>
             <div className="flex flex-col pl-4 items-start">
               <div className="font-bold">Design a Book Cover</div>
               <div className="text-sm opacity-70">
@@ -62,9 +80,42 @@ const Getstarted = async() => {
       >
         <div className="flex flex-col h-full justify-center">
           <div className="flex flex-row items-center">
-            <div className="pr-8">Logo</div>
+          <div className="relative w-12 h-12"> 
+              <Image 
+                src="/images/logo2.png" 
+                alt="Logo" 
+                layout="fill" 
+                objectFit="contain" 
+                className="w-full h-full" 
+              />
+            </div>
             <div className="flex flex-col pl-4 items-start">
               <div className="font-bold">Create Illustrations</div>
+              <div className="text-sm opacity-70">
+                Explore feature by clicking it
+              </div>
+            </div>
+          </div>
+        </div>
+      </Link>
+
+      <Link
+        className="bg-btn-orange lg:w-1/4 md:w-1/3 sm:w-full h-24 rounded-lg pl-8 text-black"
+        href="/createillustration"
+      >
+        <div className="flex flex-col h-full justify-center">
+          <div className="flex flex-row items-center">
+          <div className="relative w-12 h-12"> 
+              <Image 
+                src="/images/logo2.png" 
+                alt="Logo" 
+                layout="fill" 
+                objectFit="contain" 
+                className="w-full h-full" 
+              />
+            </div>
+            <div className="flex flex-col pl-4 items-start">
+              <div className="font-bold">Design a Logo</div>
               <div className="text-sm opacity-70">
                 Explore feature by clicking it
               </div>

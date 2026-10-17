@@ -20,6 +20,7 @@ module.exports = {
             'btn-blue' : '#bae5f5',
             'btn-green' : '#ccf0c0',
             'btn-purple' : '#e2d3fe',
+            'btn-orange' : '#FDFED3',
             'grey' :'#707281',
             'warmLow': '#f7dfe3',
             'warmMidLow': '#f97f21',

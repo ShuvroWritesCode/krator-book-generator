@@ -40,10 +40,10 @@ export default function SecondPg() {
               className="bg-primary rounded-3xl w-full mt-1 pb-4 h-[40%]"
               variant="filled"
               disableUnderline
-              defaultValue="Hungarian"
+              defaultValue={userData["industry"]}
               autoFocus={false}
             >
-              <MenuItem value="Hungarian">Hungarian</MenuItem>
+              <MenuItem value="Agency">Agency</MenuItem>
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
@@ -122,7 +122,7 @@ export default function SecondPg() {
               Logo Preview
             </InputLabel>
             <img
-              src="/images/building.jpg"
+              src={userData["logoUrl"]}
               alt="image"
               className=" object-cover rounded-lg"
             />
